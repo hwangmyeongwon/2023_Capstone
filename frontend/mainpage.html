@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AInterview</title>
+    <style>
+        nav {
+            background-color: whitesmoke;
+        }
+
+        .container-fluid {
+            padding: 0.5rem;
+        }
+
+        #logo {
+            margin-left: 250px;
+        }
+
+        #divBtn {
+            margin-right: 250px;
+        }
+
+        #divBtn button {
+            border-radius: 30px;
+        }
+
+        .main1 {
+
+            height: 430px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .main1 div {
+            flex-grow: 1;
+            /* flex-shrink: 0; */
+            /* width: 50%;  */
+        }
+
+        .main1Left div {
+
+            font-family: 'GangwonEduPowerExtraBoldA';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-size: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            /* 수직 정렬을 위한 height 설정 */
+        }
+
+        .main1Left div div {
+            padding-top: 100px;
+        }
+
+        .main1Left div div:last-child {
+            padding-top: 20px;
+        }
+
+        .main1Left div button {
+
+            width: 200px;
+            /* 버튼 너비 설정 */
+            height: 70px;
+            /* 버튼 높이 설정 */
+            font-size: x-large;
+
+        }
+
+        .main1Right {
+            margin-right: 100px;
+            background-image: url("./img/img_exam.png");
+            background-repeat: no-repeat;
+            /* 이미지 반복 여부 */
+            background-size: contain;
+            /* 배경 이미지 크기 조정 */
+        }
+
+        /* 여기서 부터 main2 */
+
+        .main2 {
+            margin-top: 100px;
+            height: 430px;
+            display: flex;
+            flex-direction: row;
+            background-color: whitesmoke;
+
+        }
+
+        .main2 div {
+            flex-grow: 1;
+        }
+
+        .main2Right div {
+
+            font-family: 'GangwonEduPowerExtraBoldA';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-size: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            width: 80%;
+            /* 수직 정렬을 위한 height 설정 */
+        }
+
+
+
+        .main2Right div div:last-child {
+            padding-top: 20px;
+
+        }
+
+        .main2Left {
+            margin-left: 200px;
+            background-image: url("./img/img_exam2.png");
+            background-size: 300px 400px;
+            background-repeat: no-repeat;
+            /* 이미지 반복 여부 */
+            background-size: contain;
+            /* 배경 이미지 크기 조정 */
+        }
+        .tech{
+            margin-top: 100px;
+            font-family: 'GangwonEduPowerExtraBoldA';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-size: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .main3 {
+            margin-top: 100px;
+            height: 430px;
+            display: flex;
+            flex-direction: row;
+            /* background-color: gray; */
+
+        }
+
+        .main3 div {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            width: 300px;
+            height: 254px;
+            background: rgb(236, 236, 236);
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+        }
+
+        footer div{
+            margin-top: 100px;
+            height: 70px;
+            background-color: gray;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a id="logo" class="navbar-brand" href="#">AInterview</a>
+            <div id="divBtn" class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-light" type="button">로그인</button>
+                <button class="btn btn-light" type="button">회원가입</button>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="main1">
+            <div class="main1Left">
+                <div>
+                    <div>
+                        면접 준비는<br>
+                        AI 와 함께<br>
+                    </div>
+                    <div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-light" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            면접 시작하기
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="main1Right">
+
+            </div>
+        </div>
+
+        <div class="main2">
+            <div class="main2Left">
+
+            </div>
+            <div class="main2Right">
+                <div>
+                    면접 준비,<br>
+                    "혼자서"효율적으로!<br><br>
+                    <font size="4" style="padding-right: 20px;">AInterview로 면접을 진행하고 피드백을 줍니다!<br></font>
+                </div>
+            </div>
+        </div>
+        <div class="tech">
+            사용 기술
+        </div>
+        <div class="main3">
+            <div>
+                <div class="card">
+
+                </div>
+            </div>
+            <div>
+                <div class="card">
+
+                </div>
+            </div>
+            <div>
+                <div class="card">
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+
+        </div>
+    </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">면접 보기 전에 준비해야할 상황</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    1.크롬을 이용<br>
+                    2.이어폰 착용<br>
+                    3.전체화면으로 설정<br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">면접 시작하기!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script> -->
+</body>
+
+</html>
