@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myPage</title>
+    <link rel="stylesheet" type="text/css" href="/css/mainpage.css">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            /* 화면 전체 높이를 차지하도록 설정 */
+        }
+
+        .mypageNav {
+            background-color: grey;
+            height: 50px;
+            margin-top: 50px;
+            margin-left: 50px;
+            margin-right: 50px;
+            display: flex;
+            align-items: center;
+            min-width: 1200px;
+            /* 최소 너비를 1200px로 설정 */
+            /* 세로 가운데 정렬 */
+
+
+        }
+
+        .mypageNav h2 {
+            margin: 10px;
+            /* h2의 기본 margin 제거 */
+            text-align: left;
+        }
+
+        .mypage {
+            display: flex;
+            min-width: 1200px;
+            /* 최소 너비를 1200px로 설정 */
+            min-height: 100vh;
+            /* 최소한의 높이를 브라우저 높이와 같게 설정 */
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        .mypageLeft {
+            width: 20%;
+            /* 왼쪽 요소의 너비 지정 */
+
+            background-color: whitesmoke;
+        }
+
+        .mypageRight {
+            width: 80%;
+            /* 오른쪽 요소의 너비 지정 */
+            /* display: flex; */
+            /* align-items: center; */
+            /* 수직 가운데 정렬 */
+
+        }
+        .mypageRight div{
+            margin:70px;
+        }
+
+
+        .table tbody td {
+            border-top: none;
+            border-bottom: none;
+        }
+
+        .table tbody th {
+            border-top: none;
+            border-bottom: none;
+        }
+
+        footer div{
+    margin-top: 100px;
+    height: 70px;
+    background-color: gray;
+}
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a id="logo" class="navbar-brand" href="mainpage.html">AInterview</a>
+            <div id="divBtn" class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-light" type="button" onclick="window.location.href='signIn.html'">로그인</button>
+                <button class="btn btn-light" type="button" onclick="window.location.href='signUp.html'">회원가입</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mypageNav">
+        <h2>나의 기록</h2>
+    </div>
+    <div class="mypage">
+        <div class="mypageLeft">
+
+        </div>
+        <div class="mypageRight">
+            <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-center">번호</th>
+                        <th scope="col" class="text-center">분야</th>
+                        <th scope="col" class="text-center">날짜</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr data-href="https://www.google.com">
+                        <th scope="row" class="text-center">1</th>
+                        <td class="text-center">콘텐츠it</td>
+                        <td class="text-center">yyyy.mm.dd</td>
+                    </tr>
+                    <tr data-href="https://www.google.com">
+                        <th scope="row" class="text-center">2</th>
+                        <td class="text-center">스마트iot</td>
+                        <td class="text-center">yyyy.mm.dd</td>
+                    </tr>
+                    <tr data-href="https://www.google.com">
+                        <th scope="row" class="text-center">3</th>
+                        <td class="text-center">빅데이터</td>
+                        <td class="text-center">yyyy.mm.dd</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- 추가할 예정 -->
+    <footer>
+        <div>
+
+        </div>
+    </footer>
+
+    <script>
+        // 각 열에 대한 이벤트 리스너를 추가합니다.
+        const rows = document.getElementsByTagName("tr");
+        for (let i = 1; i < rows.length; i++) {
+            const row = rows[i];
+            row.addEventListener("mouseenter", function () {
+                this.style.backgroundColor = "lightgray";
+            });
+            row.addEventListener("mouseleave", function () {
+                this.style.backgroundColor = "";
+            });
+        }
+
+        // 클릭 이벤트를 처리하는 함수를 작성합니다.
+        function rowClicked() {
+            const url = this.getAttribute("data-href");
+            window.location.href = url;
+        }
+
+        // 각 열에 클릭 이벤트 리스너를 추가합니다.
+        for (let i = 1; i < rows.length; i++) {
+            const row = rows[i];
+            row.addEventListener("click", rowClicked);
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

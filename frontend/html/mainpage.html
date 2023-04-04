@@ -11,12 +11,13 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a id="logo" class="navbar-brand" href="#">AInterview</a>
+            <a id="logo" class="navbar-brand" href="mainpage.html">AInterview</a>
             <div id="divBtn" class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-light" type="button">로그인</button>
-                <button class="btn btn-light" type="button">회원가입</button>
+                <button class="btn btn-light" type="button" onclick="window.location.href='signIn.html'">로그인</button>
+                <button class="btn btn-light" type="button" onclick="window.location.href='signUp.html'">회원가입</button>
             </div>
         </div>
     </nav>
@@ -38,7 +39,7 @@
                 </div>
             </div>
             <div class="main1Right">
-
+                <!-- 사진으로 배경 채우기 -->
             </div>
         </div>
 
@@ -70,18 +71,21 @@
             </div>
             <div>
                 <div class="card">
-
+                    <!-- 사진으로 배경 채우기 -->
                 </div>
             </div>
         </div>
     </main>
 
+    <!-- 추가할 예정 -->
     <footer>
         <div>
 
         </div>
     </footer>
-    <!-- Modal -->
+
+
+    <!-- Modal (면접 시작하기 누를경우 생성되는 모달) -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
@@ -91,6 +95,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <!-- 주의사항,사용방법 추가할 예정 -->
                     1.크롬을 이용<br>
                     2.이어폰 착용<br>
                     3.전체화면으로 설정<br>
@@ -101,15 +106,29 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // 로그인 상태를 확인하는 코드(필요하다면 쓸 예정)
+        let isLoggedIn = tr; // true or false로 로그인 여부를 지정
+
+
+        if (isLoggedIn) {
+            // 로그인한 경우
+            let divBtn = document.getElementById("divBtn");
+            divBtn.innerHTML = `
+    <button class="btn btn-light" type="button" onclick="window.location.href='myPage.html'">마이페이지</button>
+    <button class="btn btn-light" type="button" onclick="logout()">로그아웃</button>`;
+        } else {
+            // 로그인하지 않은 경우
+            let divBtn = document.getElementById("divBtn");
+            divBtn.innerHTML = `
+    <button class="btn btn-light" type="button" onclick="window.location.href='signIn.html'">로그인</button>
+    <button class="btn btn-light" type="button" onclick="window.location.href='signUp.html'">회원가입</button>`;
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-        crossorigin="anonymous"></script> -->
 </body>
 
 </html>
