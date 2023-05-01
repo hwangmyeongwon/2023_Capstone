@@ -11,7 +11,7 @@
         body {
             margin: 0;
             height: 100vh;
-            /* 화면 전체 높이를 차지하도록 설정 */
+            
         }
 
         .mypageNav {
@@ -23,41 +23,29 @@
             display: flex;
             align-items: center;
             min-width: 1200px;
-            /* 최소 너비를 1200px로 설정 */
-            /* 세로 가운데 정렬 */
-
 
         }
 
         .mypageNav h2 {
             margin: 10px;
-            /* h2의 기본 margin 제거 */
             text-align: left;
         }
 
         .mypage {
             display: flex;
             min-width: 1200px;
-            /* 최소 너비를 1200px로 설정 */
             min-height: 100vh;
-            /* 최소한의 높이를 브라우저 높이와 같게 설정 */
             margin-left: 50px;
             margin-right: 50px;
         }
 
         .mypageLeft {
             width: 20%;
-            /* 왼쪽 요소의 너비 지정 */
-
             background-color: whitesmoke;
         }
 
         .mypageRight {
             width: 80%;
-            /* 오른쪽 요소의 너비 지정 */
-            /* display: flex; */
-            /* align-items: center; */
-            /* 수직 가운데 정렬 */
 
         }
         .mypageRight div{
@@ -143,7 +131,7 @@
     </footer>
 
     <script>
-        // 각 열에 대한 이벤트 리스너를 추가합니다.
+        // 번호,분야,날짜 위에 마우스를 올릴경우 배경색을 바꿔주는 코드
         const rows = document.getElementsByTagName("tr");
         for (let i = 1; i < rows.length; i++) {
             const row = rows[i];
@@ -155,13 +143,13 @@
             });
         }
 
-        // 클릭 이벤트를 처리하는 함수를 작성합니다.
+        
         function rowClicked() {
             const url = this.getAttribute("data-href");
             window.location.href = url;
         }
 
-        // 각 열에 클릭 이벤트 리스너를 추가합니다.
+        
         for (let i = 1; i < rows.length; i++) {
             const row = rows[i];
             row.addEventListener("click", rowClicked);

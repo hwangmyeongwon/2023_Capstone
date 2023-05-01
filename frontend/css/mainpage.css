@@ -1,5 +1,7 @@
 nav {
     background-color: whitesmoke;
+    width: 100%;
+    min-width: 1200px; 
 }
 
 .container-fluid {
@@ -19,7 +21,8 @@ nav {
 }
 
 .main1 {
-
+    width: 100%;
+    min-width: 1200px; 
     height: 430px;
     display: flex;
     flex-direction: row;
@@ -27,8 +30,7 @@ nav {
 
 .main1 div {
     flex-grow: 1;
-    /* flex-shrink: 0; */
-    /* width: 50%;  */
+    
 }
 
 .main1Left div {
@@ -42,7 +44,7 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 400px;
+    height: 430px;
     /* 수직 정렬을 위한 height 설정 */
 }
 
@@ -69,7 +71,7 @@ nav {
     background-image: url("/img/img_exam.png");
     background-repeat: no-repeat;
     /* 이미지 반복 여부 */
-    background-size: contain;
+    background-size: fixed;
     /* 배경 이미지 크기 조정 */
 }
 
@@ -77,6 +79,8 @@ nav {
 
 .main2 {
     margin-top: 100px;
+    width: 100%;
+    min-width: 1200px; 
     height: 430px;
     display: flex;
     flex-direction: row;
@@ -113,6 +117,8 @@ nav {
 
 .main2Left {
     margin-left: 200px;
+    width: 300px;
+    height: 400px;
     background-image: url("/img/img_exam2.png");
     background-size: 300px 400px;
     background-repeat: no-repeat;
@@ -122,6 +128,8 @@ nav {
 }
 .tech{
     margin-top: 100px;
+    width: 100%;
+    min-width: 1200px; 
     font-family: 'GangwonEduPowerExtraBoldA';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
     font-weight: bold;
@@ -134,6 +142,8 @@ nav {
 }
 .main3 {
     margin-top: 100px;
+    width: 100%;
+    min-width: 1200px; 
     height: 430px;
     display: flex;
     flex-direction: row;

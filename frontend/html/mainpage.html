@@ -109,22 +109,54 @@
 
     <script>
         // 로그인 상태를 확인하는 코드(필요하다면 쓸 예정)
-        let isLoggedIn = tr; // true or false로 로그인 여부를 지정
+        let isLoggedIn = true; // true or false로 로그인 여부를 지정
 
 
         if (isLoggedIn) {
             // 로그인한 경우
             let divBtn = document.getElementById("divBtn");
-            divBtn.innerHTML = `
-    <button class="btn btn-light" type="button" onclick="window.location.href='myPage.html'">마이페이지</button>
-    <button class="btn btn-light" type="button" onclick="logout()">로그아웃</button>`;
+            divBtn.innerHTML = 
+            `<button class="btn btn-light" type="button" onclick="window.location.href='myPage.html'">마이페이지</button>
+            <button class="btn btn-light" type="button" onclick="logout()">로그아웃</button>`;
         } else {
             // 로그인하지 않은 경우
             let divBtn = document.getElementById("divBtn");
-            divBtn.innerHTML = `
-    <button class="btn btn-light" type="button" onclick="window.location.href='signIn.html'">로그인</button>
-    <button class="btn btn-light" type="button" onclick="window.location.href='signUp.html'">회원가입</button>`;
+            divBtn.innerHTML = 
+            `<button class="btn btn-light" type="button" onclick="window.location.href='signIn.html'">로그인</button>
+            <button class="btn btn-light" type="button" onclick="window.location.href='signUp.html'">회원가입</button>`;
         }
+
+        // function login() {
+        //     // 서버에서 로그인 처리 후 세션에 로그인 정보 저장
+        //     sessionStorage.setItem("loggedIn", "true");
+        //     // 버튼 상태 변경
+        //     document.getElementById("loginBtn").style.display = "none";
+        //     document.getElementById("logoutBtn").style.display = "block";
+        //     document.getElementById("mypageBtn").style.display = "block";
+        // }
+
+        // // 로그아웃
+        // function logout() {
+        //     // 세션에서 로그인 정보 삭제
+        //     sessionStorage.removeItem("loggedIn");
+        //     // 버튼 상태 변경
+        //     document.getElementById("loginBtn").style.display = "block";
+        //     document.getElementById("logoutBtn").style.display = "none";
+        //     document.getElementById("mypageBtn").style.display = "none";
+        // }
+
+        // // 페이지 로드 시 세션 정보 확인하여 버튼 상태 변경
+        // window.onload = function () {
+        //     if (sessionStorage.getItem("loggedIn") === "true") {
+        //         document.getElementById("loginBtn").style.display = "none";
+        //         document.getElementById("logoutBtn").style.display = "block";
+        //         document.getElementById("mypageBtn").style.display = "block";
+        //     } else {
+        //         document.getElementById("loginBtn").style.display = "block";
+        //         document.getElementById("logoutBtn").style.display = "none";
+        //         document.getElementById("mypageBtn").style.display = "none";
+        //     }
+        // }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
