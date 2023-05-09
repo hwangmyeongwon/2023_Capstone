@@ -6,12 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>myPage</title>
-    <link rel="stylesheet" type="text/css" href="/css/mainpage.css">
+    <link rel="stylesheet" type="text/css" href="css/mainpage.css">
     <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            
+        /* nav 부분 css */
+
+        nav {
+            background-color: whitesmoke;
+            width: 100%;
+            min-width: 1200px;
+        }
+
+        .container-fluid {
+            padding: 0.5rem;
+        }
+
+        #logo {
+            margin-left: 250px;
+        }
+
+        #divBtn {
+            margin-right: 250px;
+        }
+
+        #divBtn button {
+            border-radius: 30px;
         }
 
         .mypageNav {
@@ -48,8 +66,9 @@
             width: 80%;
 
         }
-        .mypageRight div{
-            margin:70px;
+
+        .mypageRight div {
+            margin: 70px;
         }
 
 
@@ -63,11 +82,11 @@
             border-bottom: none;
         }
 
-        footer div{
-    margin-top: 100px;
-    height: 70px;
-    background-color: gray;
-}
+        footer div {
+            margin-top: 100px;
+            height: 70px;
+            background-color: gray;
+        }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -93,32 +112,32 @@
         </div>
         <div class="mypageRight">
             <div>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col" class="text-center">번호</th>
-                        <th scope="col" class="text-center">분야</th>
-                        <th scope="col" class="text-center">날짜</th>
-                    </tr>
-                </thead>
-                <tbody class="table-group-divider">
-                    <tr data-href="https://www.google.com">
-                        <th scope="row" class="text-center">1</th>
-                        <td class="text-center">콘텐츠it</td>
-                        <td class="text-center">yyyy.mm.dd</td>
-                    </tr>
-                    <tr data-href="https://www.google.com">
-                        <th scope="row" class="text-center">2</th>
-                        <td class="text-center">스마트iot</td>
-                        <td class="text-center">yyyy.mm.dd</td>
-                    </tr>
-                    <tr data-href="https://www.google.com">
-                        <th scope="row" class="text-center">3</th>
-                        <td class="text-center">빅데이터</td>
-                        <td class="text-center">yyyy.mm.dd</td>
-                    </tr>
-                </tbody>
-            </table>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center">번호</th>
+                            <th scope="col" class="text-center">분야</th>
+                            <th scope="col" class="text-center">날짜</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        <tr data-href="https://www.google.com">
+                            <th scope="row" class="text-center">1</th>
+                            <td class="text-center">콘텐츠it</td>
+                            <td class="text-center">yyyy.mm.dd</td>
+                        </tr>
+                        <tr data-href="https://www.google.com">
+                            <th scope="row" class="text-center">2</th>
+                            <td class="text-center">스마트iot</td>
+                            <td class="text-center">yyyy.mm.dd</td>
+                        </tr>
+                        <tr data-href="https://www.google.com">
+                            <th scope="row" class="text-center">3</th>
+                            <td class="text-center">빅데이터</td>
+                            <td class="text-center">yyyy.mm.dd</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -143,13 +162,13 @@
             });
         }
 
-        
+
         function rowClicked() {
             const url = this.getAttribute("data-href");
             window.location.href = url;
         }
 
-        
+
         for (let i = 1; i < rows.length; i++) {
             const row = rows[i];
             row.addEventListener("click", rowClicked);
