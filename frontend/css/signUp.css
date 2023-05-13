@@ -1,24 +1,4 @@
-nav {
-    background-color: whitesmoke;
-}
-
-.container-fluid {
-    padding: 0.5rem;
-}
-
-#logo {
-    margin-left: 250px;
-}
-
-#divBtn {
-    margin-right: 250px;
-}
-
-#divBtn button {
-    border-radius: 30px;
-}
-
-*{
+* {
     padding: 0;
     margin: 0;
     border: none;
@@ -39,7 +19,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #D2D2D2;
-    
+
 }
 
 h2 {
@@ -79,13 +59,13 @@ h2 {
     color: #999999;
 }
 
-#login-form div{
+#login-form div {
     margin-top: 35px;
     /* margin-left: 20px; */
     text-align: center;
 }
 
-footer div{
+footer div {
     margin-top: 100px;
     background-color: gray;
     width: 100%;

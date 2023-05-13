@@ -1,33 +1,70 @@
-/* nav 부분 css */
-
-nav {
-    background-color: whitesmoke;
+ /* main 부분 css */
+ main {
+    margin-left: 300px;
     width: 100%;
-    min-width: 1200px; 
-}
-
-.container-fluid {
-    padding: 0.5rem;
-}
-
-#logo {
-    margin-left: 250px;
-}
-
-#divBtn {
-    margin-right: 250px;
-}
-
-#divBtn button {
-    border-radius: 30px;
+    max-width: 1000px;
+    min-width: 1000px;
 }
 
 
-/* footer 부분 css */
+.title {
+    margin-top: 50px;
+    font-size: xx-large;
+    font-weight: bold;
+    font-style: normal;
+}
 
-footer div{
+.explain {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.canvasTitle {
+    margin-top: 50px;
+    font-size: x-large;
+    font-weight: bold;
+    font-style: normal;
+}
+
+#videoContainer {
+    display: flex;
+    align-items: center;
+    height: 400px;
     margin-top: 100px;
-    height: 70px;
-    background-color: gray;
 }
 
+#videoElement {
+    width: 600px;
+    height: 500px;
+    object-fit: cover;
+    background-color: black;
+
+}
+
+.left,
+.right {
+    width: 100px;
+    height: 500px;
+    background-color: black;
+}
+
+.mic {
+    margin-top: 50px;
+}
+
+.micTitle{
+    margin-top: 150px;
+    font-size: x-large;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.title {
+    margin-top: 100px;
+}
+ul {
+    list-style: none;
+  }
+  

@@ -1,0 +1,16 @@
+ /* main 부분 css */
+ main {
+    margin-left: 300px;
+
+    width: 100%;
+    max-width: 1000px;
+    min-width: 1000px;
+}
+
+.input {
+    margin-top: 50px;
+}
+
+.output {
+    margin-top: 50px;
+}

@@ -1,0 +1,23 @@
+ /* nav 부분 css */
+
+ nav {
+    background-color: whitesmoke;
+    width: 100%;
+    min-width: 1200px;
+}
+
+.container-fluid {
+    padding: 0.5rem;
+}
+
+#logo {
+    margin-left: 200px;
+}
+
+#divBtn {
+    margin-right: 200px;
+}
+
+#divBtn button {
+    border-radius: 30px;
+}

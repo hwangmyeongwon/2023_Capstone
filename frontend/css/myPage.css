@@ -1,0 +1,49 @@
+.mypageNav {
+    background-color: grey;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    min-width: 1200px;
+
+}
+
+.mypageNav h2 {
+    margin: 10px;
+    text-align: left;
+}
+
+.mypage {
+    display: flex;
+    min-width: 1200px;
+    min-height: 100vh;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.mypageLeft {
+    width: 20%;
+    background-color: whitesmoke;
+}
+
+.mypageRight {
+    width: 80%;
+
+}
+
+.mypageRight div {
+    margin: 70px;
+}
+
+
+.table tbody td {
+    border-top: none;
+    border-bottom: none;
+}
+
+.table tbody th {
+    border-top: none;
+    border-bottom: none;
+}
