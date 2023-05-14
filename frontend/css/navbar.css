@@ -1,9 +1,10 @@
  /* nav 부분 css */
 
  nav {
-    background-color: whitesmoke;
+    background-color: white;
     width: 100%;
     min-width: 1200px;
+    height: 80px;
 }
 
 .container-fluid {
@@ -13,6 +14,11 @@
 #logo {
     margin-left: 200px;
 }
+
+/* #logo img{
+    width: 200px;
+    height: 100px;
+} */
 
 #divBtn {
     margin-right: 200px;
