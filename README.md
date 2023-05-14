@@ -1,3 +1,3 @@
-<img src="frontend/AInterview.gif" width="256" height="256">
+<img src="frontend/AInterview.gif" width="456" height="132">
 
 # 2023_Capstone
