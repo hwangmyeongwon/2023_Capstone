@@ -1,6 +1,7 @@
 <img src="frontend/AInterview.gif" width="456" height="132">
 
 # 2023-1 캡스톤디자인
+AI를 이용해 가상면접을 진행하고 피드백을 받는 웹사이트
 
 ## 팀 구성
 
