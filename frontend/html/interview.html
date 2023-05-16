@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>interview</title> 
-    <!-- 필요할 경우를 대비해 미리 틀만 만들어놓음-->
+    <title>interview</title>
     <link rel="stylesheet" type="text/css" href="/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
-    <link rel="stylesheet" type="text/css" href="frontend/css/interview.css">
+    <link rel="stylesheet" type="text/css" href="/css/interview.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
@@ -22,32 +21,79 @@
                 <img src="/img/logo.jpeg" alt="AInterview">
             </a>
             <div id="divBtn" class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-light" type="button" onclick="window.location.href='signIn.html'">로그인</button>
-                <button class="btn btn-light" type="button" onclick="window.location.href='signUp.html'">회원가입</button>
+                <button class="btn btn-light" type="button" onclick="window.location.href='signIn.html'">마이페이지</button>
+                <button class="btn btn-light" type="button" onclick="window.location.href='signUp.html'">로그아웃</button>
             </div>
         </div>
     </nav>
 
     <main>
-        <div class="input">
-            <form action="/submit-form" method="POST">
-                <label for="input-text">문자 입력:</label> <!--{{메세지 입력하는 곳}}-->
-                <input type="text" id="input-text" name="input-text">
-                <button type="submit">전송</button>
-              </form>
+        <div class="question_output">
+            질문 : 본인의 강점을 좋은 결과를 얻은 다른 사례가 있다면 무엇인가요?
         </div>
-        <div class="output">
-            <h5>{{챗봇에게 답변 받는 곳}}</h5>
+        <div class="interviewer">
+            <img src="/img/interviewer_exam.jpeg" alt="AInterviewer">
         </div>
+
+        <div class="canvas">
+            <div>
+                <img src="/img/mic.png" alt="mic">
+            </div>
+            <div>
+            <canvas id="visualizer"></canvas>
+            </div>
+        </div>
+        <script>
+            // 브라우저에서 마이크 액세스 권한 요청
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(stream => {
+                    const audioContext = new AudioContext();
+                    const source = audioContext.createMediaStreamSource(stream);
+                    const analyser = audioContext.createAnalyser();
+                    const canvas = document.getElementById('visualizer');
+                    const canvasCtx = canvas.getContext('2d');
+
+                    // 캔버스 크기 조정
+                    canvas.width = 300;
+                    canvas.height = 60;
+
+                    // 분석기 노드 설정
+                    analyser.fftSize = 2048;
+                    const bufferLength = analyser.frequencyBinCount;
+                    const dataArray = new Uint8Array(bufferLength);
+
+                    // 소리 시각화
+                    function draw() {
+                        requestAnimationFrame(draw);
+                        analyser.getByteFrequencyData(dataArray);
+                        canvasCtx.fillStyle = 'rgb(255, 255, 255)';
+                        canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+                        const barWidth = canvas.width / bufferLength * 2.5;
+                        let barHeight;
+                        let x = 0;
+                        for (let i = 0; i < bufferLength; i++) {
+                            barHeight = dataArray[i] / 2;
+                            canvasCtx.fillStyle = 'rgb(' + (barHeight + 100) + ',0,0)';
+                            canvasCtx.fillRect(x, canvas.height - barHeight / 2, barWidth, barHeight);
+                            x += barWidth + 1;
+                        }
+                    }
+
+                    // 마이크 입력 소스 연결
+                    source.connect(analyser);
+                    draw();
+                })
+                .catch(error => console.log(error));
+        </script>
     </main>
 
 
     <!-- 추가할 예정 -->
-    <!-- <footer>
+    <footer>
         <div>
 
         </div>
-    </footer> -->
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"

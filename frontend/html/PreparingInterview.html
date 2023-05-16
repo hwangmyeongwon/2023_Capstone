@@ -22,8 +22,8 @@
                 <img src="/img/logo.jpeg" alt="AInterview">
             </a>
             <div id="divBtn" class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-light" type="button" onclick="window.location.href='signIn.html'">로그인</button>
-                <button class="btn btn-light" type="button" onclick="window.location.href='signUp.html'">회원가입</button>
+                <button class="btn btn-light" type="button" >마이페이지</button>
+                <button class="btn btn-light" type="button" >로그아웃</button>
             </div>
         </div>
     </nav>
@@ -111,20 +111,140 @@
         <div class="title">
             👨🏻‍💻직무선택<br><br>
         </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1">
-                  웹
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                <label class="form-check-label" for="flexRadioDefault2">
-                  딥러닝
-                </label>
-              </div>
-              
-              
+
+        <!-- Default dropend button -->
+        <!-- <div class="btn-group dropend">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                웹
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class="dropdown-item" href="#">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        프론트엔드
+                    </label>
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            백엔드
+                        </label>
+                        </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            풀스택
+                        </label>
+                        </a>
+                </li>
+            </ul>
+        </div>
+        <br><br>
+        <div class="btn-group dropend">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                딥러닝
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class="dropdown-item" href="#">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        프론트엔드
+                    </label>
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            백엔드
+                        </label>
+                        </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            풀스택
+                        </label>
+                        </a>
+                </li>
+            </ul>
+        </div> -->
+
+        <div class="row">
+            <div class="col-4">
+                <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list"
+                        href="#list-home" role="tab" aria-controls="list-home">웹</a>
+                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
+                        href="#list-profile" role="tab" aria-controls="list-profile">인공지능</a>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-home" role="tabpanel"
+                        aria-labelledby="list-home-list">
+
+
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            프론트엔드
+                        </label>
+
+
+                        <br>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            백엔드
+                        </label>
+
+
+                        <br>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            풀스택
+                        </label>
+
+                    </div>
+                    <!-- 인공지능 -->
+                    <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            딥러닝
+                        </label>
+
+
+                        <br>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            머신러닝 엔지니어
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+                웹
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+                딥러닝
+            </label>
+        </div> -->
+
+
     </main>
 
 

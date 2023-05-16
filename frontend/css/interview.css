@@ -1,16 +1,56 @@
  /* main 부분 css */
  main {
     margin-left: 300px;
-
     width: 100%;
     max-width: 1000px;
     min-width: 1000px;
 }
 
-.input {
+.question_output{
     margin-top: 50px;
+    margin-left: 30px;
+    width: 700px;
+    height: 50px;
+    font-size: large;
+    font-weight: bold;
+    font-style: normal;
+    background-color: grey;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.output {
+.interviewer{
     margin-top: 50px;
+    margin-left: 170px;
+    width: 419px;
+    height: 512px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgb(236, 236, 236);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+}
+
+.canvas{
+    width: 419px;
+    height: 60px;
+
+    margin-top: 50px;
+    margin-left: 160px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.canvas div img{
+    /* height: 120px; */
 }
