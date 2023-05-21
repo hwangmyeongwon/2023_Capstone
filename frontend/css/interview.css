@@ -1,14 +1,14 @@
  /* main 부분 css */
  main {
-    margin-left: 300px;
+    margin-left: 250px;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     min-width: 1000px;
 }
 
 .question_output{
     margin-top: 50px;
-    margin-left: 30px;
+    margin-left: 100px;
     width: 700px;
     height: 50px;
     font-size: large;
@@ -16,6 +16,11 @@
     font-style: normal;
     background-color: grey;
     border-radius: 20px;
+
+    /* 밑에 코드를 입력하면 사진위로 질문이 들어감 */
+
+    /* position:absolute;
+    top: 450px; */
 
     display: flex;
     flex-direction: column;
@@ -25,9 +30,9 @@
 
 .interviewer{
     margin-top: 50px;
-    margin-left: 170px;
-    width: 419px;
-    height: 512px;
+    margin-right: 200px;
+    width: 910px;
+    height: 500px;
 
     display: flex;
     flex-direction: column;
@@ -43,7 +48,7 @@
     height: 60px;
 
     margin-top: 50px;
-    margin-left: 160px;
+    margin-left: 250px;
 
     display: flex;
     flex-direction: row;
@@ -51,6 +56,3 @@
     justify-content: center;
 }
 
-.canvas div img{
-    /* height: 120px; */
-}

@@ -3,8 +3,8 @@
 
 .main1 {
     width: 100%;
-    min-width: 1200px; 
-    height: 430px;
+    min-width: 1174px; 
+    height: 500px;
     display: flex;
     flex-direction: row;
 }
@@ -26,6 +26,8 @@
     align-items: center;
     justify-content: center;
     height: 430px;
+    padding-left: 100px;
+    padding-right: 50px;
     /* 수직 정렬을 위한 height 설정 */
 }
 
@@ -47,22 +49,15 @@
 
 }
 
-.main1Right {
-    margin-right: 100px;
-    background-image: url("/img/mainpageImg\(1\).jpg");
-    background-repeat: no-repeat;
-    /* 이미지 반복 여부 */
-    background-size: contain;
-    /* 배경 이미지 크기 조정 */
-}
+
 
 /* 여기서 부터 main2 */
 
 .main2 {
     margin-top: 50px;
     width: 100%;
-    min-width: 1200px; 
-    height: 400px;
+    min-width: 1174px; 
+    height: 500px;
     display: flex;
     flex-direction: row;
     /* background-color: whitesmoke; */
@@ -84,7 +79,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 400px;
+    height: 500px;
     width: 80%;
     /* 수직 정렬을 위한 height 설정 */
 }
@@ -98,13 +93,13 @@
 
 .main2Left {
     margin-left: 200px;
-    width: 300px;
-    height: 400px;
-    background-image: url("/img/mainpageImg\(2\).jpg");
-    background-size: 400px 400px;
-    background-repeat: no-repeat;
+    /* width: 300px;
+    height: 400px; */
+    /* background-image: url("/img/mainpageImg\(2\).jpg"); */
+    /* background-size: 400px 400px; */
+    /* background-repeat: no-repeat; */
     /* 이미지 반복 여부 */
-    background-size: contain;
+    /* background-size: contain; */
     /* 배경 이미지 크기 조정 */
 }
 .tech{
