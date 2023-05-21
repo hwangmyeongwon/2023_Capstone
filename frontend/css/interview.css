@@ -19,8 +19,8 @@
 
     /* 밑에 코드를 입력하면 사진위로 질문이 들어감 */
 
-    /* position:absolute;
-    top: 450px; */
+    position:absolute;
+    top: 450px;
 
     display: flex;
     flex-direction: column;
@@ -48,7 +48,7 @@
     height: 60px;
 
     margin-top: 50px;
-    margin-left: 250px;
+    margin-left: 0px;
 
     display: flex;
     flex-direction: row;
@@ -56,3 +56,13 @@
     justify-content: center;
 }
 
+.canvasAndButton{
+    display: flex;
+   
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    margin-left: 300px;
+}

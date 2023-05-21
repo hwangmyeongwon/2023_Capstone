@@ -32,15 +32,24 @@
             질문 : 본인의 강점을 좋은 결과를 얻은 다른 사례가 있다면 무엇인가요?
         </div>
         <div class="interviewer">
-            <img src="/img/interviewer_exam2.jpeg" alt="AInterviewer">
+            <video muted autoplay loop>
+            <!-- <img src="/img/interviewer_exam2.jpeg" alt="AInterviewer"> -->
+            <source src="/play/KakaoTalk_Video_2023-05-21-23-01-15.mp4" type="video/mp4">
+        </video>
         </div>
 
-        <div class="canvas">
-            <div>
-                <img src="/img/mic.png" alt="mic">
+
+        <div class="canvasAndButton">
+            <div class="canvas">
+                <div>
+                    <img src="/img/mic.png" alt="mic">
+                </div>
+                <div>
+                    <canvas id="visualizer"></canvas>
+                </div>
             </div>
-            <div>
-            <canvas id="visualizer"></canvas>
+            <div class="button">
+                <button class="btn btn-light" type="button">면접 종료</button>
             </div>
         </div>
         <script>

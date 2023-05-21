@@ -63,6 +63,13 @@
                 </div>
                 <div class="caption">머리 움직임</div>
             </div>
+
+            <div class="container">
+                <div>
+                    <canvas id="changeOfExpression" width="550" height="350"></canvas>
+                </div>
+                <div class="caption">표정 변화</div>
+            </div>
         </div>
     </div>
 
@@ -77,6 +84,7 @@
         var ctx_eye = document.getElementById('eyeContact').getContext('2d');
         var ctx_voice = document.getElementById('voiceVolume').getContext('2d');
         var ctx_head = document.getElementById('headMovement').getContext('2d');
+        var ctx_face = document.getElementById('changeOfExpression').getContext('2d');
 
         var eyeChart = new Chart(ctx_eye, {  //값이 들어오는 거에 따라 x,y의 최대값이 달라짐
             type: 'bubble',
@@ -182,6 +190,27 @@
                         }
                     }]
                 }
+            }
+        });
+
+        var faceChart = new Chart(ctx_face, {  //값이 들어오는 거에 따라 x,y의 최대값이 달라짐
+            type: 'pie',
+            data: data = {
+                labels: [
+                    'Red',
+                    'Blue',
+                    'Yellow'
+                ],
+                datasets: [{
+                    label: 'My First Dataset',
+                    data: [300, 50, 100],
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        'rgb(255, 205, 86)'
+                    ],
+                    hoverOffset: 4
+                }]
             }
         });
     </script>
