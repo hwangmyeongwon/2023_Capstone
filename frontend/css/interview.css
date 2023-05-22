@@ -20,7 +20,7 @@
     /* 밑에 코드를 입력하면 사진위로 질문이 들어감 */
 
     position:absolute;
-    top: 450px;
+    top: 500px;
 
     display: flex;
     flex-direction: column;
