@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PreparingInterview2</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@lo5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="/css/PreparingInterview2.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a id="logo" class="navbar-brand" href="mainpage.html">
+                <img src="/img/logo.jpeg" alt="AInterview">
+            </a>
+            <div id="divBtn" class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-light" type="button">마이페이지</button>
+                <button class="btn btn-light" type="button">로그아웃</button>
+            </div>
+        </div>
+    </nav>
+
+    <main style="background-color: rgb(232, 227, 227);">
+        <div class="card">
+            <div class="flex" style="margin-bottom: 20px;">
+                <h4>이제 캠과 마이크가 잘 작동되는지 확인할게요.</h4>
+                <h6 style="color:gray; text-align: center;">응시 중에도 지금의 얼굴 위치와 목소리 크기를
+                    <br>유지해 주세요.
+                </h6>
+            </div>
+            <div class="face_div flex">
+                <video id="videoElement"></video>
+                <canvas id="visualizer"></canvas>
+                <div class="flex" style="margin-top: 20px; margin-bottom: 10px;">
+                    <button type="button" class="btn" id="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        직무 선택하기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 추가할 예정 -->
+    <footer>
+        <div>
+
+        </div>
+    </footer>
+
+    <!-- Modal (면접 시작하기 누를경우 생성되는 모달) -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">🔎 직무 선택</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-11">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value=""
+                                        id="1CheckboxStretched">
+                                    <label class="form-check-label stretched-link" for="1CheckboxStretched">
+                                        웹</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value=""
+                                        id="2CheckboxStretched">
+                                    <label class="form-check-label stretched-link" for="2CheckboxStretched">
+                                        인공지능</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value=""
+                                        id="3CheckboxStretched">
+                                    <label class="form-check-label stretched-link" for="3CheckboxStretched">
+                                        앱</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value=""
+                                        id="4CheckboxStretched">
+                                    <label class="form-check-label stretched-link" for="4CheckboxStretched">
+                                        네트워크</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value=""
+                                        id="5CheckboxStretched">
+                                    <label class="form-check-label stretched-link" for="5CheckboxStretched">
+                                        DB</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value=""
+                                        id="6CheckboxStretched">
+                                    <label class="form-check-label stretched-link" for="6CheckboxStretched">
+                                        보안</label>
+                                </li>
+
+                            </ul>
+                            <!-- <div class="list-group" id="list-tab" role="tablist">
+                            <a class="list-group-item list-group-item-action active" id="list-home-list"
+                                data-bs-toggle="list" href="#list-Web" role="tab"
+                                aria-controls="list-home">웹</a>
+                            <a class="list-group-item list-group-item-action" id="list-profile-list"
+                                data-bs-toggle="list" href="#list-App" role="tab"
+                                aria-controls="list-profile">앱</a>
+                                <a class="list-group-item list-group-item-action" id="list-profile-list"
+                                data-bs-toggle="list" href="#list-AI" role="tab"
+                                aria-controls="list-profile">인공지능</a>
+                                <a class="list-group-item list-group-item-action" id="list-profile-list"
+                                data-bs-toggle="list" href="#list-DB" role="tab"
+                                aria-controls="list-profile">DB</a>
+                                <a class="list-group-item list-group-item-action" id="list-profile-list"
+                                data-bs-toggle="list" href="#list-Network" role="tab"
+                                aria-controls="list-profile">네트워크</a>
+                                <a class="list-group-item list-group-item-action" id="list-profile-list"
+                                data-bs-toggle="list" href="#list-Security" role="tab"
+                                aria-controls="list-profile">보안</a>
+                        </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" id="btn" onclick="window.location.href='interview.html'">
+                        면접 시작하기!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script> //웹캠 화면 띄우는 코드
+        // getUserMedia를 사용하여 웹캠 스트림을 가져옵니다.
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => {
+                const video = document.getElementById('videoElement');
+                // video 요소에 스트림을 연결합니다.
+                video.srcObject = stream;
+                video.play();
+                video.style.transform = 'scaleX(-1)';
+            })
+            .catch(error => {
+                console.error('웹캠 스트림을 가져오는 중 오류가 발생했습니다.', error);
+            });
+    </script>
+    <script>
+        // 브라우저에서 마이크 액세스 권한 요청
+        navigator.mediaDevices.getUserMedia({ audio: true })
+            .then(stream => {
+                const audioContext = new AudioContext();
+                const source = audioContext.createMediaStreamSource(stream);
+                const analyser = audioContext.createAnalyser();
+                const canvas = document.getElementById('visualizer');
+                const canvasCtx = canvas.getContext('2d');
+
+                // 캔버스 크기 조정
+                canvas.width = 150;
+                canvas.height = 50;
+
+                // 분석기 노드 설정
+                analyser.fftSize = 1024;
+                const bufferLength = analyser.frequencyBinCount;
+                const dataArray = new Uint8Array(bufferLength);
+
+                // 소리 시각화
+                function draw() {
+                    requestAnimationFrame(draw);
+                    analyser.getByteFrequencyData(dataArray);
+                    canvasCtx.fillStyle = 'rgb(255, 255, 255)';
+                    canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+                    const barWidth = canvas.width / bufferLength * 2.5;
+                    let barHeight;
+                    let x = 0;
+                    for (let i = 0; i < bufferLength; i++) {
+                        barHeight = dataArray[i] / 2;
+                        canvasCtx.fillStyle = 'rgb(' + (barHeight + 100) + ',50,50)';
+                        canvasCtx.fillRect(x, canvas.height - barHeight / 2, barWidth, barHeight);
+                        x += barWidth + 1;
+                    }
+                }
+
+                // 마이크 입력 소스 연결
+                source.connect(analyser);
+                draw();
+            })
+            .catch(error => console.log(error));
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

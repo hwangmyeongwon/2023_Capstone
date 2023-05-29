@@ -116,14 +116,24 @@
     align-items: center;
     justify-content: center;
 }
+
+.color{
+    background-color:whitesmoke;
+    margin-top: 200px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+
+}
+
+
 .main3 {
-    margin-top: 100px;
+    
     width: 100%;
     min-width: 1200px; 
     height: 430px;
     display: flex;
-    flex-direction: row;
-    /* background-color: gray; */
+    flex-direction: row;    
 
 }
 
@@ -138,7 +148,82 @@
 
 .card {
     width: 300px;
-    height: 254px;
+    height: 250px;
     background: rgb(236, 236, 236);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+}
+
+
+/* 모달 부분 수정 */
+
+.modal-content{
+    min-width: 800px;
+    min-height: 700px;
+    height: 700px;
+}
+
+.carousel-item{
+    display: flex;
+  justify-content: space-between;
+}
+
+.carousel-item div{
+    flex:1;
+    
+}
+
+
+
+
+.first_main{
+    padding-top: 50px;
+    margin-left: 30px;
+    /* background-color: rgb(256, 176, 35); */
+    font-weight: bold;
+}
+
+.first_header{
+    /* margin-top: 10%; */
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.flex{
+    display: inline-block;
+    width: 200px;
+    /* height: 100px; */
+    text-align: center;
+    margin-top: 40px;
+    /* padding-top: 40px; */
+    margin-left: 40px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+}
+
+.flex img{
+    padding-top: 30px;
+}
+
+.question{
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 40px;
+}
+
+
+.explain {
+    padding-top: 40px;
+    padding-left: 30px;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 20px;
+    
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }

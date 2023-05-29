@@ -1,26 +1,28 @@
  /* main 부분 css */
  main {
-    margin-left: 250px;
+    margin-left: 100px;
     width: 100%;
     max-width: 1200px;
     min-width: 1000px;
+    
 }
 
 .question_output{
     margin-top: 50px;
-    margin-left: 100px;
-    width: 700px;
-    height: 50px;
+    /* margin-left: 100px; */
+    width: 910px;
+    height: 100px;
     font-size: large;
     font-weight: bold;
     font-style: normal;
     background-color: grey;
-    border-radius: 20px;
+    /* border-radius: 20px; */
+    opacity: 0.7;
 
     /* 밑에 코드를 입력하면 사진위로 질문이 들어감 */
 
     position:absolute;
-    top: 500px;
+    top: 480px;
 
     display: flex;
     flex-direction: column;
@@ -32,7 +34,7 @@
     margin-top: 50px;
     margin-right: 200px;
     width: 910px;
-    height: 500px;
+    height: 450px;
 
     display: flex;
     flex-direction: column;
@@ -47,8 +49,8 @@
     width: 419px;
     height: 60px;
 
-    margin-top: 50px;
-    margin-left: 0px;
+    
+    margin-left: 100px;
 
     display: flex;
     flex-direction: row;
@@ -58,11 +60,46 @@
 
 .canvasAndButton{
     display: flex;
+    margin-top: 50px;
    
 }
 
 .button{
     display: flex;
     align-items: center;
-    margin-left: 300px;
+    margin-left: 410px;
+}
+.micbutton{
+    background-image: url(../img/mic.png);
+    width: 64px;
+    height: 64px;
+}
+
+.vis{
+    padding-left: 50px;
+}
+
+#pop{
+    background-color: #90EE90;
+    
+}
+
+.pop_b{
+    position: absolute;
+    top: 120px;
+    left: 250px;
+}
+
+.pop_question{
+    position: absolute;
+    padding: 10px;
+    top: 120px;
+    left: 310px;
+    max-width: 900px;
+    background-color: whitesmoke;
+    border-radius: 30px;
+}
+
+#interEnd{
+    background-color: orange;
 }

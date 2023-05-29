@@ -1,64 +1,120 @@
+body {
+    margin: 0;
+    height: 100vh;
+    /* 화면 전체 높이를 차지하도록 설정 */
+}
 
-        body {
-            margin: 0;
-            height: 100vh;
-            /* 화면 전체 높이를 차지하도록 설정 */
-        }
+.mypageNav {
 
-        .mypageNav {
-            background-color: grey;
-            ;
-            height: 50px;
-            margin-top: 50px;
-            margin-left: 50px;
-            margin-right: 50px;
-            display: flex;
-            align-items: center;
-            min-width: 1200px;
-            /* 최소 너비를 1200px로 설정 */
-            /* 세로 가운데 정렬 */
+    height: 50px;
+    margin-left: 180px;
+    display: flex;
+    align-items: center;
+    min-width: 1200px;
+
+}
+
+.mypageNav h2 {
+    margin: 10px;
+    text-align: left;
+}
+
+.mypage {
+    display: flex;
+    min-width: 1200px;
+    min-height: 500px;
+    margin-left: 50px;
+    margin-right: 50px;
 
 
-        }
+}
 
-        .mypageNav h2 {
-            margin: 10px;
-            /* h2의 기본 margin 제거 */
-            text-align: left;
-        }
+.mypageLeft {
+    width: 25%;
+    background-color: whitesmoke;
+    margin-left: 100px;
+    padding: 50px;
+    border-radius: 30px;
+    margin-bottom: 100px;
+    position: relative;
+}
 
-        .mypage {
-            display: flex;
-            min-width: 1200px;
-            min-height: 100vh;
-            margin-left: 50px;
-            margin-right: 50px;
-        }
+.mypageRight {
+    width: 75%;
+    margin-bottom: 100px;
 
-        .mypageLeft {
-            width: 20%;
-            background-color: whitesmoke;
-        }
+}
 
-        .mypageRight {
-            width: 80%;
+.mypageRight .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+    margin-left: 70px;
 
-        }
+}
 
-        .mypageRight .container {
-            position: relative;
-            margin: 70px;
-            margin-top: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+.mypageRight .caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+}
 
-        .mypageRight .caption {
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: #fff;
-            padding: 10px;
-        }
+main {
+    background-color: rgb(232, 227, 227);
+    padding: 50px;
+}
+
+.in_main {
+    background-color: white;
+    border-radius: 50px;
+    min-width: 1200px;
+    padding-top: 50px;
+}
+
+.ques {
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 30px;
+
+    margin: 0 auto;
+    width: 70px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.ques h5 {
+    padding: 10px;
+}
+
+
+#recv_ques {
+
+    background-color: whitesmoke;
+    border-radius: 30px;
+    padding: 20px;
+    margin-left: 30px;
+    font-family: 'MICEGothic Bold', sans-serif;
+
+}
+
+/* 아코디언 색상 바꾸기 */
+.accordion {
+    --bs-accordion-active-bg: #90EE90 !important;
+    --bs-accordion-active-color: black !important;
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0 !important;
+}
+
+
+.feedback_text {
+    opacity: 0;
+    transition: 0.5s;
+    color:darkgray;
+    background-color:beige;
+    border-radius: 30px;
+    padding: 10px;
+}

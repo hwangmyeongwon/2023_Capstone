@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    height: 100vh;
+    /* 화면 전체 높이를 차지하도록 설정 */
+}
+
+.mypageNav {
+    /* background-color: grey; */
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    min-width: 1200px;
+
+}
+
+
+.mypageNav h2 {
+    margin: 10px;
+    /* h2의 기본 margin 제거 */
+    text-align: left;
+}
+
+.mypage {
+    display: flex;
+    min-width: 1200px;
+    min-height: 500px;
+    margin-left: 50px;
+    margin-right: 50px;
+    
+    
+}
+
+.mypageLeft {
+    width: 0%;
+    background-color: whitesmoke;
+    margin-left: 100px;
+    padding: 50px;
+    border-radius: 30px;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.mypageRight {
+    
+    margin-bottom: 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.mypageRight .container {
+    position: relative;
+    /* margin: 70px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+
+    min-width: 1200px;
+
+}
+
+main{
+    background-color: rgb(232, 227, 227);
+    padding: 50px;
+}
+
+.in_main{
+    background-color: white;
+    border-radius: 50px;
+    min-width: 1200px;
+    padding-top: 50px;
+}
+
+.box{
+    margin-top: 40px;
+    /* border: 1px solid black; */
+    text-align: center;
+    /* 테두리 스타일 설정 */
+    border-radius: 30px;
+    padding: 40px;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+}
+
+.text{
+    display: flex;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.explain{
+    margin-top: 20px;
+    border-radius: 30px;
+    padding: 40px;
+
+    font-weight: bold;
+    font-size: 15px;
+    background: rgba(247, 247, 178, 0.5);
+    
+}
+
+.voiceVolume{
+    /* width: 503px; */
+    margin-top: 40px;
+    /* border: 1px solid black; */
+    border-radius: 30px;
+    padding: 40px;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+}
+
+
+
+.changeOfExpression{
+    text-align: center;
+    /* 테두리 스타일 설정 */
+    border-radius: 30px;
+    padding: 40px;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+}

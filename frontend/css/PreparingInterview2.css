@@ -1,0 +1,59 @@
+main {
+    /* margin-left: 300px; */
+    width: 100%;
+    height: 100vh;
+    /* max-width: 1200px; */
+    min-width: 1200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 600px;
+    margin-top: -50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /* padding-left: 20px; */
+    padding-right: 20px;
+    /* background: rgb(236, 236, 236); */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+}
+
+
+.face_div {
+    border-radius: 70px;
+}
+
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#videoElement {
+    width: 400px;
+    border-radius: 30px;
+    background: rgb(236, 236, 236);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+}
+
+#btn {
+    background-color: #90EE90;
+    /* color: rgb(256, 176, 35); */
+}
+
+h6 {
+    align-items: center;
+}
+
+.form-check-input:checked {
+    background-color: #1fc00e;
+    border-color: white;
+}

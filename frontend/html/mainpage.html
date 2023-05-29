@@ -10,7 +10,8 @@
     <link rel="stylesheet" type="text/css" href="/css/mainpage.css">
 
     <!-- 부트스트랩의 css를 적용하기 위한 css 링크 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 
 <body>
@@ -36,8 +37,7 @@
                     </div>
                     <div>
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
+                        <button type="button" class="btn btn-light" onclick="window.location.href='PreparingInterview.html'" >
                             면접 시작하기
                         </button>
                     </div>
@@ -60,23 +60,23 @@
                 </div>
             </div>
         </div>
-        <div class="tech">
-            사용 기술
-        </div>
-        <div class="main3">
-            <div>
-                <div class="card">
 
+        <div class="color">
+            <div class="main3">
+                <div>
+                    <div class="card">
+                        <img src="/img/GAN.jpeg" alt="GAN">
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div class="card">
-
+                <div>
+                    <div class="card">
+                        <img src="/img/CHATBOT.jpeg" alt="GAN">
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div class="card">
-                    <!-- 사진으로 배경 채우기 -->
+                <div>
+                    <div class="card">
+                        <img src="/img/AI.jpeg" alt="GAN">
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,89 +85,38 @@
     <!-- 추가할 예정 -->
     <footer>
         <div>
-
+            @한림대학교
         </div>
     </footer>
 
 
-    <!-- Modal (면접 시작하기 누를경우 생성되는 모달) -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">면접 보기 전에 준비해야할 사항</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- 주의사항,사용방법 추가할 예정 -->
-                    <h3>체크해야할 사항</h3><br>
-                    1️⃣ AInerview는 <img src="/img/chrome.png" alt="Chrome">Chrome 에서만 동작합니다. <br>
-                    &nbsp;&nbsp; &nbsp; &nbsp;
-                    반드시 <img src="/img/chrome.png" alt="Chrome">Chrome 을 이용해주세요.
-                    <br><br>
-                    2️⃣ 원할한 면접진행을 위해 <img src="/img/earbuds.png" alt="Earphone">이어폰 혹은 <img src="/img/headphones.png" alt="Headphone">헤드폰을 준비해주세요.
-                    <br><br>
-                    3️⃣ 면접진행은 <img src="/img/fullscreen.png" alt="Fullscreen">전체화면으로 설정해주세요.<br>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" onclick="window.location.href='notification.html'">면접 시작하기!</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    
+    
 
     <script>
-        // 로그인 상태를 확인하는 코드(필요하다면 쓸 예정)
-        let isLoggedIn = true; // true or false로 로그인 여부를 지정
+        // 캐러셀의 마지막장으로 갈 경우, 
+        // "다음" 에서 "면접시작"으로 바뀌는 코드
+        var carousel = document.getElementById("carouselExampleControlsNoTouching");
+        var buttonContainer = document.getElementById("buttonContainer");
+        var button = buttonContainer.querySelector("button");
 
+        carousel.addEventListener("slid.bs.carousel", function (event) {
+            var activeItem = event.relatedTarget;
+            var isLastSlide = activeItem.nextElementSibling === null;
 
-        if (isLoggedIn) {
-            // 로그인한 경우
-            let divBtn = document.getElementById("divBtn");
-            divBtn.innerHTML = 
-            `<button class="btn btn-light" type="button" onclick="window.location.href='myPage.html'">마이페이지</button>
-            <button class="btn btn-light" type="button" onclick="logout()">로그아웃</button>`;
-        } else {
-            // 로그인하지 않은 경우
-            let divBtn = document.getElementById("divBtn");
-            divBtn.innerHTML = 
-            `<button class="btn btn-light" type="button" onclick="window.location.href='signIn.html'">로그인</button>
-            <button class="btn btn-light" type="button" onclick="window.location.href='signUp.html'">회원가입</button>`;
-        }
-
-        // function login() {
-        //     // 서버에서 로그인 처리 후 세션에 로그인 정보 저장
-        //     sessionStorage.setItem("loggedIn", "true");
-        //     // 버튼 상태 변경
-        //     document.getElementById("loginBtn").style.display = "none";
-        //     document.getElementById("logoutBtn").style.display = "block";
-        //     document.getElementById("mypageBtn").style.display = "block";
-        // }
-
-        // // 로그아웃
-        // function logout() {
-        //     // 세션에서 로그인 정보 삭제
-        //     sessionStorage.removeItem("loggedIn");
-        //     // 버튼 상태 변경
-        //     document.getElementById("loginBtn").style.display = "block";
-        //     document.getElementById("logoutBtn").style.display = "none";
-        //     document.getElementById("mypageBtn").style.display = "none";
-        // }
-
-        // // 페이지 로드 시 세션 정보 확인하여 버튼 상태 변경
-        // window.onload = function () {
-        //     if (sessionStorage.getItem("loggedIn") === "true") {
-        //         document.getElementById("loginBtn").style.display = "none";
-        //         document.getElementById("logoutBtn").style.display = "block";
-        //         document.getElementById("mypageBtn").style.display = "block";
-        //     } else {
-        //         document.getElementById("loginBtn").style.display = "block";
-        //         document.getElementById("logoutBtn").style.display = "none";
-        //         document.getElementById("mypageBtn").style.display = "none";
-        //     }
-        // }
+            if (isLastSlide) {
+                button.innerHTML = "면접시작";
+                button.addEventListener("click", function () {
+                    window.location.href = "PreparingInterview.html";
+                });
+            } else {
+                button.innerHTML = "다음";
+                button.removeEventListener("click", null);
+            }
+        });
     </script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>

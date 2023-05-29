@@ -1,70 +1,42 @@
- /* main 부분 css */
- main {
-    margin-left: 300px;
-    width: 100%;
-    max-width: 1000px;
-    min-width: 1000px;
-}
-
-
-.title {
-    margin-top: 50px;
-    font-size: xx-large;
-    font-weight: bold;
-    font-style: normal;
-}
-
-.explain {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-weight: bold;
-    font-style: normal;
-}
-
-.canvasTitle {
-    margin-top: 50px;
-    font-size: x-large;
-    font-weight: bold;
-    font-style: normal;
-}
-
-#videoContainer {
-    display: flex;
-    align-items: center;
-    height: 400px;
-    margin-top: 100px;
-}
-
-#videoElement {
-    width: 600px;
-    height: 500px;
-    object-fit: cover;
-    background-color: black;
-
-}
-
-.left,
-.right {
-    width: 100px;
-    height: 500px;
-    background-color: black;
-}
-
-.mic {
-    margin-top: 50px;
-}
-
-.micTitle{
-    margin-top: 150px;
-    font-size: x-large;
-    font-weight: bold;
-    font-style: normal;
-}
-
-.title {
-    margin-top: 100px;
-}
-ul {
-    list-style: none;
-  }
+main {
   
+  width: 100%;
+  height: 100vh;
+  min-width: 1200px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 400px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: rgb(236, 236, 236);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+}
+
+
+.img_div,
+.carousel-inner {
+  border-radius: 70px;
+}
+
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#btn {
+  background-color: #90EE90;
+  
+}

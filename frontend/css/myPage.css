@@ -1,9 +1,12 @@
+main{
+    background-color: rgb(232, 227, 227);
+    padding: 50px;
+}
+
 .mypageNav {
-    background-color: grey;
+    
     height: 50px;
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 120px;
     display: flex;
     align-items: center;
     min-width: 1200px;
@@ -15,27 +18,26 @@
     text-align: left;
 }
 
+.in_main{
+    background-color: white;
+    border-radius: 50px;
+    min-width: 1200px;
+    padding: 50px;
+}
+
 .mypage {
     display: flex;
-    min-width: 1200px;
+    min-width: 1000px;
     min-height: 100vh;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 100px;
+    
 }
 
-.mypageLeft {
-    width: 20%;
-    background-color: whitesmoke;
-}
 
 .mypageRight {
-    width: 80%;
-
+    min-width: 1000px;
 }
 
-.mypageRight div {
-    margin: 70px;
-}
 
 
 .table tbody td {
@@ -46,4 +48,16 @@
 .table tbody th {
     border-top: none;
     border-bottom: none;
+}
+
+.col{
+    /* margin-left: 10px; */
+}
+
+.cards{
+    margin: 100px;
+    padding: 100px;
+    border-radius: 50px;
+    background: rgb(236, 236, 236);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
 }
