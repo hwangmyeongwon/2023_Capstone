@@ -10,6 +10,9 @@ GAN(AI)으로 생성한 가상 면접관과 면접을 보고 AI 분석을 통해
 <br><br>
 집에서도 누구나 이용할 수 있도록 노트북의 웹캠을 이용하여 사용자를 모습을 담을려는 취지로 웹사이트를 제작하였고, AI와 웹사이트를 연결시키기 위해 Flask를 이용하였습니다.
 
+# architecture
+<img  alt="image" src="/AInterview_architecture/AInterview_architecture.png">
+
 
 ## 팀원 구성
 
