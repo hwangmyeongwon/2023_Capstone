@@ -14,6 +14,20 @@ GAN(AI)으로 생성한 가상 면접관과 면접을 보고 AI 분석을 통해
 
 <br>
 
+### 다른 사이트와 차별된 점
+
+1.  면접관 
+    - styleGAN으로 얼굴을 생성하고 실제 사람 영상에 faceswap을 통해 가상 면접관 생성
+  
+2. 피드백 
+    - 실시간 캠에 빚춰지는 모습과 저장되는 영상을 통해 분석하여 피드백 제공
+        - 머리 움직임
+        - 시선 처리
+	      - 표정 변화
+	      - 목소리 크기
+
+<br>
+
 # architecture
 <img  alt="image" src="/AInterview_architecture/AInterview_architecture.png">
 
