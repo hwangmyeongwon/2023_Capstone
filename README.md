@@ -37,7 +37,6 @@ GAN(AI)으로 생성한 가상 면접관과 면접을 보고 AI 분석을 통해
 - PyTorch
 - MediaPipe
 - matplotlib
-- 
 
 
 
@@ -56,3 +55,19 @@ GAN(AI)으로 생성한 가상 면접관과 면접을 보고 AI 분석을 통해
 
 <br>
 
+## 팀 회의 일지
+https://www.notion.so/AInterview-6ec93ec6d9744fab83edd0b8ab9a9714?pvs=4
+
+
+<br>
+
+## 참고 자료 및 개발 과정
+* [프론트엔드 참고자료](https://www.notion.so/366079d1184c42b3aa9f0797c642b75e?pvs=4)
+* [백엔드 참고자료](https://www.notion.so/4115812c39134336aba01132b20aa8c9?pvs=4)
+* [챗봇 개발과정](https://www.notion.so/ChatGPT-990ab9ccb89243a5be1188a0d177b592?pvs=4)
+* [가상 면접관 개발과정](https://www.notion.so/c0c2564d54cd4ccb97b61223865da39b?pvs=4)
+* 피드백 부분(AI)
+  1. [머리 움직임](https://www.notion.so/963dd322c4cf4097a35d4422ac592984?pvs=4)
+  2. [표정 감지](https://www.notion.so/58c42d4cf0554e14b035e3d5659b5a7d?pvs=4)
+  3. [시선 처리](https://www.notion.so/7ecf2c7bc18c4042967ba02e8821aec1?pvs=4)
+  4. [목소리 크기](https://www.notion.so/f7ddd7d53ab942338ca50568d529a559?pvs=4)
