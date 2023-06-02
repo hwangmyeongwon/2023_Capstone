@@ -1,5 +1,4 @@
 from flask import Flask,render_template,json
-import pyttsx3
 import openai
 import speech_recognition as sr
 from pyautogui import *
@@ -13,16 +12,6 @@ app=Flask(__name__)
 
 cnt=0
 messages=[]
-text = '\ub124'
-encoded_text = text.encode('ascii', errors='ignore')
-conn = pymysql.connect(
-    user="root",
-    passwd="0000",
-    host="127.0.0.1",
-    db="interview_type",
-    charset="UTF8"
-)
-cursor=conn.cursor()
 
 def tt_speak(t):
     engine = pyttsx3.init('sapi5')
