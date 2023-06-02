@@ -23,8 +23,8 @@ GAN(AI)으로 생성한 가상 면접관과 면접을 보고 AI 분석을 통해
     - 실시간 캠에 빚춰지는 모습과 저장되는 영상을 통해 분석하여 피드백 제공
         - 머리 움직임
         - 시선 처리
-	      - 표정 변화
-	      - 목소리 크기
+        - 표정 변화
+        - 목소리 크기
 
 <br>
 
@@ -68,6 +68,12 @@ GAN(AI)으로 생성한 가상 면접관과 면접을 보고 AI 분석을 통해
 
 
 <br>
+
+## 시연 영상
+[![Video Label](http://img.youtube.com/vi/f6jL0pL6Ebs/0.jpg)](https://youtu.be/f6jL0pL6Ebs)
+
+<br>
+
 
 ## 팀 회의 일지
 https://www.notion.so/AInterview-6ec93ec6d9744fab83edd0b8ab9a9714?pvs=4
