@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>interview</title>
-    <link rel="stylesheet" type="text/css" href="/css/navbar.css">
-    <link rel="stylesheet" type="text/css" href="/css/footer.css">
-    <link rel="stylesheet" type="text/css" href="/css/interview.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/interview.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -20,11 +20,11 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a id="logo" class="navbar-brand" href="mainpage.html">
-                <img src="/img/logo.jpeg" alt="AInterview">
+                <img src="../static/img/logo.jpeg" alt="AInterview">
             </a>
             <div id="divBtn" class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-light" type="button" onclick="window.location.href='signIn.html'">마이페이지</button>
-                <button class="btn btn-light" type="button" onclick="window.location.href='signUp.html'">로그아웃</button>
+                <button class="btn btn-light" type="button" onclick="window.location.href='/signIn'">마이페이지</button>
+                <button class="btn btn-light" type="button" onclick="window.location.href='/signUp'">로그아웃</button>
             </div>
         </div>
     </nav>
@@ -32,30 +32,82 @@
     <main style="border-radius: 20px; background-color: white;">
        
         <div class="pop_b">
-            <button id="pop" type="button" class="btn" onclick="toggleVideoSource()">
+            <button id="pop" type="button" class="btn" >
                 질문
             </button>
         </div>
         <div class="pop_question" style="display: none;">
-            본인의 강점을 좋은 결과를 얻은 다른 사례가 있다면 무엇인가요? 다른 사례가 있다면 무엇인가요?
+            <!-- 본인의 강점을 좋은 결과를 얻은 다른 사례가 있다면 무엇인가요? 다른 사례가 있다면 무엇인가요? -->
         </div>
         <div style="padding-left:140px; padding-top: 10px; margin-top: 30px; padding-bottom: 20px;">
             <div class="interviewer">
                 <video id="interviewerVideo" width="100%" height="100%" muted autoplay loop>
-                    <source id="videoSource" src="/play/interviewer_exam.mov" type="video/mp4">
+                    <source src = "../static/img/starting.mp4" type="video/mp4">
+                    <source src="{{ Video_url }}" type="video/mp4">
+                    <!-- <source id="videoSource" src="/play/interviewer_exam.mov" type="video/mp4"> -->
                 </video>
             </div>
             <div class="canvasAndButton">
                 <div class="canvas">
                     <div>
-                        <img src="/img/mic.png" alt="mic">
+                        <style>
+                            button{
+                                background-color: white;
+                                border: 0px;
+                            }
+                            
+                        </style>
+                    
+                    <div id="buttonset">
+                        <button type="submit" name='msg' alt="mic" class="micbutton" id="interview" onclick="interview()" >
+                            <img src="../static/img/chating_grey.png" width: 154px height: 47px></button> 
+                        <button type="submit" name="answer" aria-multiline="answer" id="answer" onclick="endresponse()">
+                            <img src="../static/img/chating_green.png" width:154px height: 47px></button>
+                       
                     </div>
+                </div>
                     <div class="vis">
                         <canvas id="visualizer"></canvas>
                     </div>
                 </div>
+                <script>
+                    
+                    $(document).ready(function() {
+                        $("button[name='msg'],button[name='answer']").click(function(event) {
+                            event.preventDefault(); // 기본 동작 방지
+                    // GET 요청으로 데이터를 서버에 전송
+                            $.get("/get" ,{ msg: true,answer:true }).done(function(data) {
+                                $("#pop_question").empty();
+                                var result =JSON.parse(data);
+                                console.log(result);
+                                var message = result.message;
+                                console.log(message);
+                                $("#pop_question").append(result);
+                                document.getElementById("pop_question");
+    
+                            });
+                        });
+
+                    });
+                </script>
+                <script>
+                    function endresponse(){
+                        
+                        var videoUrl='../static/img/listening.mp4';
+                        var videoElement=document.getElementById('interviewer');
+                        videoElement.src=videoUrl;
+                        
+                    }
+                    function interview(){
+
+                        var videoUrl='../static/img/interviewspeaking.mp4';
+                        var videoElement=document.getElementById('interviewer');
+                        videoElement.src=videoUrl;
+                    }
+                </script>
+
                 <div class="button" >
-                    <button id="interEnd" class="btn" type="button" onclick="window.location.href='result_exam.html'">면접 종료</button>
+                    <button id="interEnd" class="btn" type="button" onclick="window.location.href='/mainpages'">면접 종료</button>
                 </div>
             </div>
         </div>
@@ -114,27 +166,7 @@
             });
         </script>
 
-        <script>
-            function toggleVideoSource() {
-            var videoSourceElement = document.getElementById('videoSource');
-            var currentSource = videoSourceElement.getAttribute('src');
-            
-            if (currentSource === '/play/interviewer_exam.mov') {
-                
-                videoSourceElement.setAttribute('src', '/play/interviewer_exam2.mov');
-            } else {
-                
-                videoSourceElement.setAttribute('src', '/play/interviewer_exam.mov');
-                
-            }
-
-            var videoElement = document.getElementById('interviewerVideo');
-            
-            videoElement.load();
-            videoElement.play();
-        }
         
-        </script>
 
     </main>
 

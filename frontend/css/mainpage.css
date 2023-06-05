@@ -93,14 +93,6 @@
 
 .main2Left {
     margin-left: 200px;
-    /* width: 300px;
-    height: 400px; */
-    /* background-image: url("/img/mainpageImg\(2\).jpg"); */
-    /* background-size: 400px 400px; */
-    /* background-repeat: no-repeat; */
-    /* 이미지 반복 여부 */
-    /* background-size: contain; */
-    /* 배경 이미지 크기 조정 */
 }
 .tech{
     margin-top: 100px;
@@ -178,12 +170,10 @@
 .first_main{
     padding-top: 50px;
     margin-left: 30px;
-    /* background-color: rgb(256, 176, 35); */
     font-weight: bold;
 }
 
 .first_header{
-    /* margin-top: 10%; */
     margin-left: 30px;
     font-weight: bold;
     font-size: 30px;
@@ -192,10 +182,8 @@
 .flex{
     display: inline-block;
     width: 200px;
-    /* height: 100px; */
     text-align: center;
     margin-top: 40px;
-    /* padding-top: 40px; */
     margin-left: 40px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
