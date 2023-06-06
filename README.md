@@ -51,6 +51,7 @@ GAN(AI)으로 생성한 가상 면접관과 면접을 보고 AI 분석을 통해
 - PyTorch
 - MediaPipe
 - matplotlib
+- OpenCV
 
 
 
