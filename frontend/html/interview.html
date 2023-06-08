@@ -105,6 +105,26 @@
                         videoElement.src=videoUrl;
                     }
                 </script>
+                <script>
+                    
+                    $(document).ready(function() {
+                        $("button[name='msg'],button[name='answer']").click(function(event) {
+                            event.preventDefault(); // 기본 동작 방지
+                    // GET 요청으로 데이터를 서버에 전송
+                            $.get("/get" ,{ msg: true,answer:true }).done(function(data) {
+                                $("#pop_question").empty();
+                                var result =JSON.parse(data);
+                                console.log(result);
+                                var message = result.message;
+                                console.log(message);
+                                $("#pop_question").append(result);
+                                document.getElementById("pop_question");
+    
+                            });
+                        });
+
+                    });
+                </script>
 
                 <div class="button" >
                     <button id="interEnd" class="btn" type="button" onclick="window.location.href='/mainpages'">면접 종료</button>

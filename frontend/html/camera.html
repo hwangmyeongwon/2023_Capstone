@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+       /* video {
+            display: none; /* 실행 화면을 숨기기 위한 스타일 설정 
+        }*/
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <body>
+        <form action="/upload" method="POST">
+            <input type="text" name="url">
+            <input type="submit" value="Upload">
+        </form>
+       
+    </body>
+    <script>
+      
+
+
+        // 웹캠 활성화
+        navigator.mediaDevices.getUserMedia({ video: true })
+        
+        .then(function(stream) {
+            var video = document.createElement('video');
+            video.srcObject = stream;
+            document.body.appendChild(video);
+            video.play();
+
+            // 영상 저장
+            var mediaRecorder = new MediaRecorder(stream);
+            var chunks = [];
+
+            mediaRecorder.ondataavailable = function(e) {
+                chunks.push(e.data);
+                
+            }
+
+            mediaRecorder.onstop = function() {
+                var blob = new Blob(chunks, { type: 'video/mp4' });
+                var url = URL.createObjectURL(blob);
+                console.log(blob);
+                console.log(url);
+
+
+                var a = document.createElement('a');
+                a.href = url;
+               // location.href='/getvideo';  //면접이 끝난 후 이동하는 페이지 링크 삽입
+                a.download = 'captured_video.mp4';
+                console.log(url);
+                document.body.appendChild(a);
+                a.click();
+                var inputElement = document.querySelector('input[name="url"]');
+                inputElement.value = url;
+            }
+
+            // 영상 저장 시작/정지
+            var startButton = document.createElement('button');
+            startButton.textContent = 'Start Recording';
+            startButton.addEventListener('click', function() {
+                mediaRecorder.start();
+                startButton.disabled = true;
+            });
+            document.body.appendChild(startButton);
+
+            var stopButton = document.createElement('button');
+            stopButton.textContent = 'Stop Recording';
+            stopButton.addEventListener('click', function() {
+                mediaRecorder.stop();
+                startButton.disabled = false;
+            });
+            document.body.appendChild(stopButton);
+
+        })
+        .catch(function(error) {
+            console.log('웹캠을 활성화할 수 없습니다:', error);
+        });
+
+    </script>
+   
+    
+</head>
+<body>
+        <!-- 여기에 웹캠을 사용하는 다른 요소나 기능을 추가할 수 있습니다 --> 
+    <video id="video_recorded" autoplay></video>
+    <!-- <button onclick="handleBlob(blob)">Click me</button> -->
+    
+     
+</body>
+</html> 
